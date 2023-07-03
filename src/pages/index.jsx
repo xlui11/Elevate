@@ -1,7 +1,9 @@
+import Hero from "../components/Sections/Hero.jsx"
+
 const Index = () => {
     return (
         <div>
-            Homepage
+            <Hero/>
         </div>
     );
 };

@@ -2,7 +2,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Components import
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Reusables/Navbar.jsx";
 
 
 import Home from "./pages";
