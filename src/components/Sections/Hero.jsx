@@ -10,7 +10,7 @@ import MainButton from "../Reusables/MainButton.jsx"
 const Hero = () => {
     return (
         <section>
-            <section className="flex h-[86vh] justify-center items-center gap-[80px] text-primary bg-line  bg-no-repeat bg-right-bottom bg-cover">
+            <section className="flex h-[86vh]  items-center gap-[80px] text-primary bg-line  bg-no-repeat bg-right-bottom bg-cover">
                 <img src="" alt=""/>
                 <div className="text-center flex flex-col gap-[16px]">
                     <div>
@@ -37,7 +37,7 @@ const Hero = () => {
                     <img src={HeroBooks} alt="Stack of books to represent learning"/>
                 </figure>
             </section>
-            <a className="absolute md:bottom-8 hidden md:flex w-full justify-center items-center cursor-pointer">
+            <a className="absolute md:bottom-8 hidden md:flex cursor-pointer md:w-[1440px] justify-center">
                 <motion.div
                     animate={{y: [0, 28, 0]}}
                     transition={{
