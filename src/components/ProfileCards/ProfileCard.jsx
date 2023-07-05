@@ -8,6 +8,8 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
 	};
 	const colorProfile = random(cardColorPool);
+
+	console.log(colorProfile.border);
 	return (
 		<div
 			className={`border-4 border-[${colorProfile.border}] w-[340px] h-[380px] bg-[${colorProfile.background}] rounded-xl flex flex-col justify-center items-center gap-[16px]`}

@@ -10,7 +10,7 @@ import { TeamProfiles } from "../../constants";
 
 const MeetTheTeam = () => {
 	return (
-		<section className="text-primary py-[180px] flex flex-col gap-[64px] lg:px-32">
+		<section className="text-primary md:py-[180px] flex flex-col gap-[64px] lg:px-32">
 			<SectionText
 				title="Meet our tutors"
 				tag="World class, friendly & professional"

@@ -36,4 +36,28 @@ const cardColorPool = [
 	}
 ];
 
-export { TeamProfiles, cardColorPool };
+const Testimonials = [
+	{
+		name: "Freddy Chan",
+		title: "Year 12 student",
+		photo: Jazmine,
+		testimonial:
+			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
+	},
+	{
+		name: "Freddy Chan",
+		title: "Year 12 student",
+		photo: Jazmine,
+		testimonial:
+			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
+	},
+	{
+		name: "Freddy Chan",
+		title: "Year 12 student",
+		photo: Jazmine,
+		testimonial:
+			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
+	}
+];
+
+export { TeamProfiles, cardColorPool, Testimonials };
