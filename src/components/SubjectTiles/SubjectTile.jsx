@@ -17,10 +17,11 @@ const SubjectTile = ({subject, classification, tag, years, href, category}) => {
 		}
 	// 	Should return a string we can use as a tailwind utility class
 	}
+
 	return (
 		<div className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[260px] ${GeneratingCardColors(classification)}`}>
 			<div className="py-[4px] w-full">
-				<img src={MathIcon} />
+				<img src={MathIcon}  alt="Math icon" className="pb-1"/>
 				<div className="flex flex-col gap-[16px]">
 					<div className="space-y-[8px]">
 						<h3 className="text-[20px] font-bold">{subject}</h3>

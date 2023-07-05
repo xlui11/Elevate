@@ -27,7 +27,7 @@ const cardColorPool = [
 		background: "#FFDFA7"
 	},
 	{
-		border: "#FABCA3",
+		border: "#FF9A73",
 		background: "#EED2C7"
 	},
 	{
@@ -61,6 +61,7 @@ const Testimonials = [
 ];
 
 const SubjectOfferings = [
+	// Senior High School
 	{
 		name: "Advanced Mathematics",
 		classification: "Maths",
@@ -118,7 +119,7 @@ const SubjectOfferings = [
 		href: "/"
 	},
 	{
-		name: "Legal Studies",
+		name: "Business Studies",
 		classification: "Humanities",
 		tag: "10 weeks of weekly quizzes and exam preparations",
 		years: ["Year 11", "Year 12"],
@@ -126,11 +127,37 @@ const SubjectOfferings = [
 		href: "/"
 	},
 	{
-		name: "Business Studies",
+		name: "High School English",
 		classification: "Humanities",
 		tag: "10 weeks of weekly quizzes and exam preparations",
 		years: ["Year 11", "Year 12"],
 		category: "Senior High School",
+		href: "/"
+	},
+
+	// 	Junior High School
+	{
+		name: "Science",
+		classification: "Science",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Years 7-10"],
+		category: "Junior High School",
+		href: "/"
+	},
+	{
+		name: "High School English",
+		classification: "Humanities",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Years 7-10"],
+		category: "Junior High School",
+		href: "/"
+	},
+	{
+		name: "High School Mathematics",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Years 7-10"],
+		category: "Junior High School",
 		href: "/"
 	},
 ]
