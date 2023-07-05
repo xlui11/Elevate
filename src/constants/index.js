@@ -60,4 +60,79 @@ const Testimonials = [
 	}
 ];
 
-export { TeamProfiles, cardColorPool, Testimonials };
+const SubjectOfferings = [
+	{
+		name: "Advanced Mathematics",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Extension Mathematics 1",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Extension Mathematics 2",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Physics",
+		classification: "Science",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Chemistry",
+		classification: "Science",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Biology",
+		classification: "Science",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Economics",
+		classification: "Humanities",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Legal Studies",
+		classification: "Humanities",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+	{
+		name: "Business Studies",
+		classification: "Humanities",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 11", "Year 12"],
+		category: "Senior High School",
+		href: "/"
+	},
+]
+
+export { TeamProfiles, cardColorPool, Testimonials, SubjectOfferings };
