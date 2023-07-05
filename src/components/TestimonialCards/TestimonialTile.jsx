@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const TestimonialTile = ({ index, name, photo, title, testimonial }) => {
 	// console.log(name);
 	return (
-		<div className="border-4 border-[#FFB430] w-full rounded-xl px-[32px] flex flex-col items-center h-[420px] justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain">
+		<div className="border-2 border-[#FFB430] w-full rounded-xl px-[32px] flex flex-col items-center h-[420px] justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain">
 			<p className="text-[16px]">&quot;{testimonial}&quot;</p>
 			<div className="flex flex-col gap-[8px]">
 				<h3 className="text-[20px] font-bold">{name}</h3>
