@@ -160,6 +160,32 @@ const SubjectOfferings = [
 		category: "Junior High School",
 		href: "/"
 	},
+
+	// Kindergarten - Primary
+	{
+		name: "Primary School Mathematics",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Kindergarten - Year 6"],
+		category: "Kindergarten & Primary",
+		href: "/"
+	},
+	{
+		name: "Primary School English",
+		classification: "Humanities",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Kindergarten - Year 6"],
+		category: "Kindergarten & Primary",
+		href: "/"
+	},
+	{
+		name: "Selective School Preparation",
+		classification: "Maths",
+		tag: "10 weeks of weekly quizzes and exam preparations",
+		years: ["Year 5", "Year 6"],
+		category: "Kindergarten & Primary",
+		href: "/"
+	},
 ]
 
 export { TeamProfiles, cardColorPool, Testimonials, SubjectOfferings };

@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import MathIcon from "../../assets/Subjects/MathIcon.svg";
 import RightIcon from "../../assets/rightArrowCircle.jsx";
 
-const SubjectTile = ({subject, classification, tag, years, href, category}) => {
+const SubjectTile = ({subject, classification, tag, years, href}) => {
 	const GeneratingCardColors = (classification) => {
 		switch(classification) {
 			case classification = "Maths":
@@ -19,7 +19,7 @@ const SubjectTile = ({subject, classification, tag, years, href, category}) => {
 	}
 
 	return (
-		<div className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[260px] ${GeneratingCardColors(classification)}`}>
+		<div className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[290px] ${GeneratingCardColors(classification)}`}>
 			<div className="py-[4px] w-full">
 				<img src={MathIcon}  alt="Math icon" className="pb-1"/>
 				<div className="flex flex-col gap-[16px]">

@@ -21,7 +21,7 @@ const SubjectTiles = () => {
 				<SubjectButton buttonText="Junior High School" currCategory={currCategory} handleToggle={handleToggle}/>
 				<SubjectButton buttonText="Kindergarten & Primary" currCategory={currCategory} handleToggle={handleToggle}/>
 			</div>
-			<div className="p-[8px] flex flex-wrap gap-[12px] flex-end">
+			<div className="py-[8px] flex flex-wrap gap-[12px] flex-end">
 				{SubjectOfferings.map((subject, index) => {
 					if (currCategory === subject.category) {
 						return (
