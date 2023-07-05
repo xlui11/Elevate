@@ -12,10 +12,17 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 	console.log(colorProfile.border);
 	return (
 		<div
-			className={`border-4 border-[${colorProfile.border}] w-[340px] h-[380px] bg-[${colorProfile.background}] rounded-xl flex flex-col justify-center items-center gap-[16px]`}
+			style={{
+				border: `4px solid ${colorProfile.border}`, backgroundColor: colorProfile.background
+			}}
+			className={`border-4  w-[340px] h-[380px]  rounded-xl flex flex-col justify-center items-center gap-[16px]`}
 		>
+
 			<img
-				className={`rounded-full w-[214px] h-[214px] border-4 border-[${colorProfile.border}] object-cover`}
+				style={{
+					border: `4px solid ${colorProfile.border}`
+				}}
+				className={`rounded-full w-[214px] h-[214px] object-cover`}
 				src={profileImg}
 				alt={`Photo of ${name}`}
 			/>
