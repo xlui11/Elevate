@@ -11,7 +11,6 @@ const Hero = () => {
     return (
         <section>
             <section className="flex h-[86vh]  items-center gap-[80px] text-primary bg-line  bg-no-repeat bg-right-bottom bg-cover">
-                <img src="" alt=""/>
                 <div className="text-center flex flex-col gap-[16px]">
                     <div>
                         <h1 className="text-[128px] uppercase tracking-wider">Elevate</h1>

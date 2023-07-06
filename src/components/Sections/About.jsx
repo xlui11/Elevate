@@ -4,8 +4,9 @@ import ClassPicture from "../../assets/classPicture.png"
 
 const About = () => {
     return (
-        <section className="text-primary lg:px-32">
-            <section className=" h-screen flex items-center justify-center h-full mx-auto gap-[42px] bg-line bg-no-repeat bg-right bg-cover">
+        <section className="text-primary bg-line bg-no-repeat bg-right bg-cover h-screen flex flex-col justify-between">
+            <div></div>
+            <section className="flex items-center justify-center mx-auto gap-[20px]  ">
                 <section className="flex flex-col gap-[16px]">
                     <div className="gap-[8px]">
                         <h2 className="text-[20px] uppercase">Why Elevate tutoring</h2>
@@ -14,7 +15,7 @@ const About = () => {
                     <p className="text-[20px]">We are a tutoring centre based in Cabramatta specialising in small group learning. At Elevate Tutoring we understand the importance of building relationships with our students. We aim to help you achieve your personal best academic success. </p>
                 </section>
                 <figure className="flex w-full justify-center">
-                    <img src={ClassPicture} alt="Image showing the classroom" className="w-[400px] h-[400px]"/>
+                    <img src={ClassPicture} alt="Image showing the classroom" className="w-[400px] "/>
                 </figure>
             </section>
             <div className="w-full flex justify-between h-[100px] items-center text-center">

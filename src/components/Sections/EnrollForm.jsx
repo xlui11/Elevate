@@ -69,31 +69,31 @@ const EnrollForm = () => {
     }
 
     return (
-        <section className="text-primary md:py-[180px] flex flex-col gap-[64px] lg:px-32">
+        <section className="text-primary md:py-[180px] flex flex-col gap-[64px]">
             <SectionText
                 title="How you can reach us"
                 tag="Sign up for a risk free, free trial"
                 paragraph="We would love to find out more about your needs and requirements. Kindly fill out the form or give us a call and we will reach out to you for a free trial."
             />
-            <section className="flex gap-[44px]">
+            <section className="flex gap-[64px]">
                 <div className="w-1/2 flex flex-col gap-[16px]">
                     <h2 className="text-[40px] font-bold">Reach out to us!</h2>
                     {/* This will be the form */}
                     <form ref={formRef} className="flex flex-col py-3 space-y-4" onSubmit={handleSubmit}>
-                        <label htmlFor="">
+                        <label htmlFor="name">
                             <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Full name" className="py-4 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
                         </label>
-                        <label htmlFor="">
+                        <label htmlFor="phoneNumber">
                             <input type="text" name="phoneNumber" value={form.phoneNumber} onChange={handleChange} placeholder="Phone number" className="py-4 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
                         </label>
-                        <label htmlFor="">
+                        <label htmlFor="email">
                             <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="Email" className="py-4 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
                         </label>
                         <div className="flex justify-between space-x-6">
-                            <label htmlFor="" className="w-1/2">
+                            <label htmlFor="grade" className="w-1/2">
                                 <input type="text" name="grade" value={form.grade} onChange={handleChange} placeholder="Grade" className="py-4 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
                             </label>
-                            <label htmlFor="" className="w-1/2">
+                            <label htmlFor="subjectChoice" className="w-1/2">
                                 <input type="text" name="subjectChoice" value={form.subjectChoice} onChange={handleChange} placeholder="Subject choice" className="py-4 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
                             </label>
                         </div>

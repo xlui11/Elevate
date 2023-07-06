@@ -10,7 +10,7 @@ import TestimonialTileSection from "../TestimonialCards/TestimonialTileSection";
 const TestimonialSection = () => {
 	// console.log(Testimonials);
 	return (
-		<section className="md:py-[180px] flex flex-col gap-[64px] lg:px-32 text-primary">
+		<section className="md:py-[180px] flex flex-col gap-[64px] text-primary">
 			<SectionText
 				title="Testimonials"
 				tag="Hear from our students"
