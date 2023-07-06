@@ -25,7 +25,7 @@ const SubjectTile = ({subject, classification, tag, years, href}) => {
 				<div className="flex flex-col gap-[16px]">
 					<div className="space-y-[8px]">
 						<h3 className="text-[20px] font-bold">{subject}</h3>
-						<p className="text-[16px] text-[#8A8A89]">{tag}</p>
+						<p className="text-[#8A8A89]">{tag}</p>
 					</div>
 					<div className="flex gap-[12px]">
 						<p className="rounded-md bg-[#FFB6A399]/60 py-[4px] px-[8px]">Year 11</p>

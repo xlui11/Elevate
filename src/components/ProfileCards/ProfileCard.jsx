@@ -28,8 +28,8 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 			/>
 			<h3 className="text-[24px] font-bold">{name}</h3>
 			<div className="text-[20px] text-[#202020] text-center">
-				<p>{role}</p>
-				<p>{tag}</p>
+				<p className="font-semibold">{role}</p>
+				<p >{tag}</p>
 			</div>
 		</div>
 	);
