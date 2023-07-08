@@ -21,7 +21,6 @@ const SubjectTile = ({subject, classification, tag, years, href, index}) => {
 		}
 	// 	Should return a string we can use as a tailwind utility class
 	}
-
 	return (
 		<motion.div
 			initial={{ opacity: 0, x: -100}}
@@ -45,8 +44,9 @@ const SubjectTile = ({subject, classification, tag, years, href, index}) => {
 						<p className="text-[#8A8A89]">{tag}</p>
 					</div>
 					<div className="flex gap-[12px]">
-						<p className="rounded-md bg-[#FFB6A399]/60 py-[4px] px-[8px]">Year 11</p>
-						<p className="rounded-md bg-[#F1BD6999]/60 py-[4px] px-[8px]">Year 12</p>
+						{years.map((year, index) => {
+							return index === 0 ? <p key={index} className="rounded-md bg-[#FFB6A399]/60 py-[4px] px-[8px]">{year}</p> : <p key={index} className="rounded-md bg-[#F1BD6999]/60 py-[4px] px-[8px]">{year}</p>
+						})}
 					</div>
 					<div className="h-px bg-[#5B5B5B]/20 w-full"/>
 				</div>
