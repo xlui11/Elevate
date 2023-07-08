@@ -20,7 +20,7 @@ const SubjectTiles = () => {
 	return (
 		<section className="w-full lg:flex gap-[16px]">
 			<motion.div
-				variants={textFade(0)}
+				variants={textFade(1)}
 				className="flex flex-col p-[8px] gap-[12px] flex-initial w-full lg:w-auto">
 				<SubjectButton buttonText="Senior High School"  currCategory={currCategory} handleToggle={handleToggle}/>
 				<SubjectButton buttonText="Junior High School" currCategory={currCategory} handleToggle={handleToggle}/>
