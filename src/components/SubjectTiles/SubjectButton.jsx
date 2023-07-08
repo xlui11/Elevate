@@ -10,7 +10,7 @@ const SubjectButton = ({ buttonText, currCategory, handleToggle }) => {
                 currCategory === buttonText
                     ? "border-2 border-[#E99762] bg-[#F4D3A8] shadow-xl"
                     : "border-1 shadow-sm"
-            }  px-[12px] py-[12px] text-black font-medium text-[20px] rounded-lg cursor-pointer w-[256px]`}
+            }  px-[12px] py-[12px] text-black font-medium text-[20px] rounded-lg cursor-pointer lg:w-[256px] w-full`}
         >
             {buttonText}
         </button>

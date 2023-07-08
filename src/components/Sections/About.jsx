@@ -9,19 +9,19 @@ import {fadeIn} from "../../utils/motion.js"
 
 const About = () => {
     return (
-        <section className="text-primary bg-line bg-no-repeat bg-right bg-cover h-screen flex flex-col justify-between">
+        <section className="lg:h-screen lg:justify-between lg:py-0 pb-12  text-primary bg-line bg-no-repeat bg-right bg-cover flex flex-col space-y-16">
             <div></div>
             <motion.section
-
-                className="flex items-center justify-center mx-auto gap-[20px]">
+                className="lg:flex items-center justify-center mx-auto space-y-[20px] px-8">
                 <motion.section
                     variants={fadeIn("right", "tween", 0.2, 1)}
                     className="flex flex-col gap-[16px]">
+
                     <div className="gap-[8px]">
-                        <h2 className="text-[20px] uppercase">Why Elevate tutoring</h2>
-                        <h1 className="text-[48px] font-semibold leading-[56px]">Personalised and <br/>relationship based tutoring</h1>
+                        <h2 className="lg:text-[20px] mb-1 uppercase">Why Elevate tutoring</h2>
+                        <h1 className="lg:text-[48px] text-[24px] font-semibold lg:leading-[56px] leading-[32px]">Personalised and <br/>relationship based tutoring</h1>
                     </div>
-                    <p className="text-[20px]">We are a tutoring centre based in Cabramatta specialising in small group learning. At Elevate Tutoring we understand the importance of building relationships with our students. We aim to help you achieve your personal best academic success. </p>
+                    <p className="lg:text-[20px]">We are a tutoring centre based in Cabramatta specialising in small group learning. At Elevate Tutoring we understand the importance of building relationships with our students. We aim to help you achieve your personal best academic success. </p>
                 </motion.section>
                 <motion.figure
                     variants={fadeIn("left", "tween", 0.2, 1)}
@@ -29,10 +29,10 @@ const About = () => {
                     <img src={ClassPicture} alt="Image showing the classroom" className="w-[400px] "/>
                 </motion.figure>
             </motion.section>
-            <div className="w-full flex justify-between h-[100px] items-center text-center">
-                <div className="w-full text-[24px] bg-[#E99762]/60 h-full items-center flex justify-center">Meet the team</div>
-                <div className="w-full text-[24px] bg-[#F4E1C7] h-full items-center flex justify-center">Testimonial</div>
-                <div className="w-full text-[24px] bg-[#B8DDD0] h-full items-center flex justify-center">Subject offerings</div>
+            <div className="w-full lg:flex justify-between lg:h-[100px] items-center text-center">
+                <div className="w-full lg:text-[24px] text-[20px] bg-[#E99762]/60 h-full items-center flex justify-center py-6">Meet the team</div>
+                <div className="w-full lg:text-[24px] text-[20px] bg-[#F4E1C7] h-full items-center flex justify-center py-6">Testimonial</div>
+                <div className="w-full lg:text-[24px] text-[20px] bg-[#B8DDD0] h-full items-center flex justify-center py-6">Subject offerings</div>
             </div>
         </section>
     );

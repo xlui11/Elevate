@@ -13,11 +13,11 @@ const SubjectTile = ({subject, classification, tag, years, href, index}) => {
 	const GeneratingCardColors = (classification) => {
 		switch(classification) {
 			case classification = "Maths":
-				return "border-[#547197] shadow-[3px_2px_0px_0px_rgba(84,113,151,0.3)]";
+				return "border-[#547197] lg:shadow-[3px_2px_0px_0px_rgba(84,113,151,0.3)]";
 			case classification = "Science":
-				return "border-[#71705E] shadow-[3px_2px_0px_0px_rgba(113,112,94,0.3)]"
+				return "border-[#71705E] lg:shadow-[3px_2px_0px_0px_rgba(113,112,94,0.3)]"
 			case classification = "Humanities":
-				return "border-[#5C925C] shadow-[3px_2px_0px_0px_rgba(92,146,92,0.3)]"
+				return "border-[#5C925C] lg:shadow-[3px_2px_0px_0px_rgba(92,146,92,0.3)]"
 		}
 	// 	Should return a string we can use as a tailwind utility class
 	}
@@ -36,7 +36,7 @@ const SubjectTile = ({subject, classification, tag, years, href, index}) => {
 
 				}
 			}}
-			className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[290px] ${GeneratingCardColors(classification)}`}>
+			className={`lg:border-2 lg:bg-[#F5EDE3] p-[12px] rounded-lg lg:w-[290px] w-full ${GeneratingCardColors(classification)}`}>
 			<div className="py-[4px] w-full">
 				<img src={MathIcon}  alt="Math icon" className="pb-1"/>
 				<div className="flex flex-col gap-[16px]">

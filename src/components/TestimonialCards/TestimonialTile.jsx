@@ -9,8 +9,8 @@ const TestimonialTile = ({ index, name, photo, title, testimonial }) => {
 	return (
 		<motion.div
 			variants={fadeIn("right", "tween", index*0.5 + 1, 0.5)}
-			className="border-2 border-[#FFB430] w-full rounded-xl px-[32px] flex flex-col items-center h-[470px] justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain">
-			<p className="text-[20px]">&quot;{testimonial}&quot;</p>
+			className="border-2 border-[#FFB430] w-full rounded-xl lg:px-[32px] px-[16px] flex flex-col items-center lg:h-[470px] h-[400px] justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain">
+			<p className="lg:text-[20px] ">&quot;{testimonial}&quot;</p>
 			<div className="flex flex-col gap-[8px]">
 				<h3 className="text-[20px] font-bold">{name}</h3>
 				<p>{title}</p>

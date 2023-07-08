@@ -10,19 +10,19 @@ const SectionText = ({ title, tag, paragraph }) => {
 		<section className="text-center flex gap-[16px] flex-col lg:px-[120px]">
 			<motion.h1
 				variants={textFade(0.2)}
-				className="text-[20px] uppercase"
+				className="lg:text-[20px] mb-1 uppercase"
 			>
 				{title}
 			</motion.h1>
 			<motion.h2
 				variants={textFade(0.5)}
-				className="text-[48px] font-semibold leading-[56px]"
+				className="lg:text-[48px] text-[32px] leading-[40px] font-semibold lg:leading-[56px]"
 			>
 				{tag}
 			</motion.h2>
 			<motion.p
 				variants={textFade(0.5)}
-				className="text-[20px]"
+				className="lg:text-[20px]"
 			>
 				{paragraph}
 			</motion.p>
