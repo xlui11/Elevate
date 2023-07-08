@@ -5,7 +5,11 @@ import PropTypes from "prop-types"
 import MathIcon from "../../assets/Subjects/MathIcon.svg";
 import RightIcon from "../../assets/rightArrowCircle.jsx";
 
-const SubjectTile = ({subject, classification, tag, years, href}) => {
+import {motion} from "framer-motion";
+
+// variants={fadeIn("right", "tween", index*0.5 + 1, 0.2)}
+
+const SubjectTile = ({subject, classification, tag, years, href, index}) => {
 	const GeneratingCardColors = (classification) => {
 		switch(classification) {
 			case classification = "Maths":
@@ -19,7 +23,20 @@ const SubjectTile = ({subject, classification, tag, years, href}) => {
 	}
 
 	return (
-		<div className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[290px] ${GeneratingCardColors(classification)}`}>
+		<motion.div
+			initial={{ opacity: 0, x: -100}}
+			animate={{ opacity: 1, x: 0 }}
+			transition={{delay: index * 0.2, type: "spring", duration: 0.5}}
+			exit={{
+				opacity: 0,
+				x: 250,
+				transition: {
+					duration: 0.5,
+					type: "spring",
+
+				}
+			}}
+			className={`border-2 bg-[#F5EDE3] p-[12px] rounded-lg w-[290px] ${GeneratingCardColors(classification)}`}>
 			<div className="py-[4px] w-full">
 				<img src={MathIcon}  alt="Math icon" className="pb-1"/>
 				<div className="flex flex-col gap-[16px]">
@@ -38,7 +55,7 @@ const SubjectTile = ({subject, classification, tag, years, href}) => {
 					<RightIcon/>
 				</a>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
@@ -51,5 +68,6 @@ SubjectTile.propTypes = {
 	years: PropTypes.array.isRequired,
 	classification: PropTypes.string,
 	href: PropTypes.string,
-	category: PropTypes.string
+	category: PropTypes.string,
+	index: PropTypes.number.isRequired
 }

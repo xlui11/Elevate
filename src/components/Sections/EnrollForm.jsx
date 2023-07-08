@@ -2,6 +2,8 @@ import {useRef, useState} from "react";
 
 // Helper
 import {SectionsWrapper} from "../../hoc/"
+import {motion} from "framer-motion";
+import {fadeIn} from "../../utils/motion.js";
 
 // Components
 import SectionText from "../Reusables/SectionText.jsx";
@@ -76,7 +78,9 @@ const EnrollForm = () => {
                 paragraph="We would love to find out more about your needs and requirements. Kindly fill out the form or give us a call and we will reach out to you for a free trial."
             />
             <section className="flex gap-[64px]">
-                <div className="w-1/2 flex flex-col gap-[16px]">
+                <motion.div
+                    variants={fadeIn("right", "tween", 1.2, 1)}
+                    className="w-1/2 flex flex-col gap-[16px]">
                     <h2 className="text-[40px] font-bold">Reach out to us!</h2>
                     {/* This will be the form */}
                     <form ref={formRef} className="flex flex-col py-3 space-y-4" onSubmit={handleSubmit}>
@@ -106,8 +110,10 @@ const EnrollForm = () => {
                             </button>
                         </div>
                     </form>
-                </div>
-                <div className="w-1/2 flex flex-col gap-[16px]">
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("left", "tween", 1.2, 1)}
+                    className="w-1/2 flex flex-col gap-[16px]">
                     <h2 className="text-[40px] font-bold">Location & Hours</h2>
                     <div className="flex gap-[32px] py-3">
                         <img src={Clock} alt="Icon of a clock to represent the opening times"/>
@@ -138,7 +144,7 @@ const EnrollForm = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </section>
         </section>
     );

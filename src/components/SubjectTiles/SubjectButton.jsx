@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+
+
 const SubjectButton = ({ buttonText, currCategory, handleToggle }) => {
     return (
         <button

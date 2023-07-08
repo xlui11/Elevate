@@ -5,6 +5,10 @@ import PropTypes from "prop-types";
 import ProfileCard from "./ProfileCard";
 import MainButton from "../Reusables/MainButton";
 
+import {motion} from "framer-motion";
+import {textFade} from "../../utils/motion.js";
+
+
 const ProfileCardSection = ({ teamProfiles }) => {
 	return (
 		<section className="flex justify-between flex-wrap gap-[24px] text-gray-900">
@@ -19,9 +23,11 @@ const ProfileCardSection = ({ teamProfiles }) => {
 				/>
 			))}
 
-			<div className="w-full flex flex-col items-end py-[8px]">
+			<motion.div
+				variants={textFade(2.5)}
+				className="w-full flex flex-col items-end py-[8px]">
 				<MainButton buttonText="Meet the rest of the team" />
-			</div>
+			</motion.div>
 		</section>
 	);
 };

@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 // Data
 import { cardColorPool } from "../../constants";
 
+import {motion} from "framer-motion";
+import {fadeIn} from "../../utils/motion.js";
+
 const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 	const random = (colorsArr) => {
 		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
@@ -11,7 +14,8 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 
 	console.log(colorProfile.border);
 	return (
-		<div
+		<motion.div
+			variants={fadeIn("right", "tween", index*0.5 + 1, 0.5)}
 			style={{
 				border: `4px solid ${colorProfile.border}`, backgroundColor: colorProfile.background
 			}}
@@ -31,7 +35,7 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 				<p className="font-semibold">{role}</p>
 				<p >{tag}</p>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
