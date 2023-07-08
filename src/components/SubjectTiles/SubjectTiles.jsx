@@ -15,8 +15,8 @@ const SubjectTiles = () => {
 	}
 
 	return (
-		<section className="w-full flex gap-[16px]">
-			<div className="flex flex-col  p-[8px] gap-[12px] flex-initial">
+		<section className="w-full lg:flex gap-[16px]">
+			<div className="flex flex-col p-[8px] gap-[12px] flex-initial w-full lg:w-auto">
 				<SubjectButton buttonText="Senior High School"  currCategory={currCategory} handleToggle={handleToggle}/>
 				<SubjectButton buttonText="Junior High School" currCategory={currCategory} handleToggle={handleToggle}/>
 				<SubjectButton buttonText="Kindergarten & Primary" currCategory={currCategory} handleToggle={handleToggle}/>

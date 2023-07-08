@@ -16,7 +16,7 @@ const staggerContainer = (staggerChildren, delayChildren) => {
 const SectionsWrapper = (Component, idName) =>
     function HOC() {
         return (
-            <motion.section id={idName} variants={staggerContainer()} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}} className="sm:max-w-[1280px] mx-auto"
+            <motion.section id={idName} variants={staggerContainer()} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}} className="lg:max-w-[1280px] mx-auto pb-[48px]"
             >
                 <Component/>
             </motion.section>

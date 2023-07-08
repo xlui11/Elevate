@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 const SectionText = ({ title, tag, paragraph }) => {
 	return (
 		<section className="text-center flex gap-[16px] flex-col lg:px-[120px]">
-			<h1 className="text-[20px] uppercase">{title}</h1>
-			<h2 className="text-[48px] font-semibold leading-[56px]">{tag}</h2>
-			<p className="text-[20px]">{paragraph}</p>
+			<h1 className="lg:text-[20px] mb-1 uppercase">{title}</h1>
+			<h2 className="lg:text-[48px] text-[32px] leading-[40px] font-semibold lg:leading-[56px]">{tag}</h2>
+			<p className="lg:text-[20px]">{paragraph}</p>
 		</section>
 	);
 };

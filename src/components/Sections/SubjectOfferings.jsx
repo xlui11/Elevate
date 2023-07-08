@@ -7,7 +7,7 @@ import SubjectTiles from "../SubjectTiles/SubjectTiles";
 
 const SubjectOfferings = () => {
 	return (
-		<section className="text-primary md:py-[180px] flex flex-col gap-[64px]">
+		<section className="text-primary md:py-[180px] flex flex-col gap-[64px] px-4">
 			<SectionText
 				title="Subject offerings"
 				tag="Curriculum created for you"

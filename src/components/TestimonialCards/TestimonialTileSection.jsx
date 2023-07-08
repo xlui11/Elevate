@@ -5,7 +5,7 @@ import { Testimonials } from "../../constants";
 
 const TestimonialTileSection = () => {
 	return (
-		<section className="w-full flex gap-[24px]">
+		<section className="w-full flex flex-col lg:flex-row gap-[24px] px-4">
 			{Testimonials.map((testimonial, index) => (
 				<TestimonialTile
 					key={index}

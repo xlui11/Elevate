@@ -7,7 +7,7 @@ import MainButton from "../Reusables/MainButton";
 
 const ProfileCardSection = ({ teamProfiles }) => {
 	return (
-		<section className="flex justify-between flex-wrap gap-[24px] text-gray-900">
+		<section className="flex lg:justify-between justify-center flex-wrap gap-[24px] text-gray-900">
 			{teamProfiles.map((profile, index) => (
 				<ProfileCard
 					key={profile.name}
@@ -19,7 +19,7 @@ const ProfileCardSection = ({ teamProfiles }) => {
 				/>
 			))}
 
-			<div className="w-full flex flex-col items-end py-[8px]">
+			<div className="w-full flex flex-col lg:items-end py-[8px]">
 				<MainButton buttonText="Meet the rest of the team" />
 			</div>
 		</section>
