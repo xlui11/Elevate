@@ -16,3 +16,26 @@
 body {
   background-color: #F8F3F0;
 }
+
+.dot-container {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot-highlight {
+  background: gray;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}

@@ -9,7 +9,7 @@ import {fadeIn} from "../../utils/motion.js"
 
 const About = () => {
     return (
-        <section className="lg:h-screen lg:justify-between lg:py-0 pb-12  text-primary bg-line bg-no-repeat bg-right bg-cover flex flex-col space-y-16">
+        <section className="lg:h-screen lg:justify-between lg:py-0 pb-12 text-primary bg-line bg-no-repeat bg-right bg-cover flex flex-col space-y-16">
             <div></div>
             <motion.section
                 className="lg:flex items-center justify-center mx-auto space-y-[20px] px-8">

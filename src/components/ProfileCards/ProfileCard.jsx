@@ -12,7 +12,6 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 	};
 	const colorProfile = random(cardColorPool);
 
-	console.log(colorProfile.border);
 	return (
 		<motion.div
 			variants={fadeIn("right", "tween", index*0.5 + 1, 0.5)}

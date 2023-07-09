@@ -10,8 +10,8 @@ import MainButton from "../Reusables/MainButton.jsx"
 const Hero = () => {
     return (
         <section>
-            <section className="flex lg:flex-row lg:py-0 lg:h-[86vh] lg:gap-[80px] lg:px-0 flex-col-reverse  pt-[48px]  items-center  text-primary bg-line bg-no-repeat lg:bg-right-bottom bg-cover px-8">
-                <div className="text-center flex flex-col gap-[40px]">
+            <section className="flex lg:flex-row lg:py-0 lg:h-[86vh] lg:gap-[80px] lg:px-0 flex-col-reverse pt-[48px]  items-center text-primary bg-line bg-no-repeat lg:bg-right-bottom bg-cover px-8">
+                <div className="text-center flex flex-col gap-[40px] w-full">
                     <div>
                         <h1 className="lg:text-[128px] text-[64px] uppercase tracking-wider">Elevate</h1>
                         <h2 className="lg:text-[48px] text-[24px] uppercase tracking-wider lg:mt-[-20px]">Tutoring</h2>
