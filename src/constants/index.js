@@ -45,18 +45,16 @@ const Testimonials = [
 			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
 	},
 	{
-		name: "Freddy Chan",
+		name: "Paerlana Tanawat",
 		title: "Year 12 student",
 		photo: Jazmine,
-		testimonial:
-			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
+		testimonial: "Elevate tutoring offers the best tutors that motivate you to do well and are very supportive. They provide a safe and comfortable environment where students are able to express any concerns and troubles in their learning."
 	},
 	{
-		name: "Freddy Chan",
-		title: "Year 12 student",
+		name: "Trena-Talita",
+		title: "Parent",
 		photo: Jazmine,
-		testimonial:
-			"I used to struggle with math, but since coming here, I feel much more confident and my grades have improved a lot. Thank you for helping me succeed!"
+		testimonial: "Both our children have been coming to Elevate tutoring for 3 years. In this time they have both drastically improved and are still doing amazing... I would highly recommend this school to everyone it’s a great learning environment and the teachers genuinely care."
 	}
 ];
 

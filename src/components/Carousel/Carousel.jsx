@@ -60,14 +60,14 @@ const Slides = ({currentPage, direction, setPage, xOffset, testimonials}) => {
         }
     }
     return (
-        <div className="relative w-[350px] h-[380px]">
+        <div className="relative w-[350px] h-[430px]">
             <AnimatePresence
                 initial={false}
                 custom={direction}
             >
                 <motion.div
                     key={currentPage}
-                    className="border-2 border-[#FFB430] w-full rounded-xl lg:px-[32px] px-[16px] flex flex-col items-center lg:h-[470px] h-[400px] justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain absolute top-0 bottom-0 left-0 right-0"
+                    className="border-2 border-[#FFB430] w-full rounded-xl px-[16px] flex flex-col items-center h-auto py-12 justify-center text-center bg-white gap-[20px] shadow-xl bg-testimonial bg-no-repeat bg-bottom bg-contain absolute top-0 bottom-0 left-0 right-0"
                     variants={sliderVariant}
                     initial="enter"
                     animate="active"
@@ -82,7 +82,7 @@ const Slides = ({currentPage, direction, setPage, xOffset, testimonials}) => {
                 >
                     <p>&quot;{testimonials[currentPage].testimonial}&quot;</p>
                     <div>
-                        <h3>{testimonials[currentPage].name}</h3>
+                        <h3 className="text-[20px] font-bold">{testimonials[currentPage].name}</h3>
                         <p>{testimonials[currentPage].title}</p>
                     </div>
                     <img
