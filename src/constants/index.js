@@ -18,7 +18,43 @@ const TeamProfiles = [
 		profileImg: DaDog,
 		role: "Teaching support | Therapy dog",
 		tag: "He's a Husky"
-	}
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
+	{
+		name: "Ciri",
+		profileImg: DaDog,
+		role: "Teaching support | Therapy dog",
+		tag: "He's a Husky"
+	},
 ];
 
 const cardColorPool = [

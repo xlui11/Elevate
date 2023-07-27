@@ -16,7 +16,7 @@ const SectionText = ({ title, tag, paragraph }) => {
 			</motion.h1>
 			<motion.h2
 				variants={textFade(0.5)}
-				className="lg:text-[48px] text-[32px] leading-[40px] font-semibold lg:leading-[56px]"
+				className="lg:text-[48px] text-[32px] leading-[40px] lg:leading-[56px]"
 			>
 				{tag}
 			</motion.h2>

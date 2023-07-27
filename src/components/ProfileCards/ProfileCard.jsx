@@ -13,8 +13,7 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 	const colorProfile = random(cardColorPool);
 
 	return (
-		<motion.div
-			variants={fadeIn("right", "tween", index*0.5 + 1, 0.5)}
+		<div
 			style={{
 				border: `4px solid ${colorProfile.border}`, backgroundColor: colorProfile.background
 			}}
@@ -34,7 +33,7 @@ const ProfileCard = ({ index, profileImg, name, role, tag }) => {
 				<p className="font-semibold">{role}</p>
 				<p >{tag}</p>
 			</div>
-		</motion.div>
+		</div>
 	);
 };
 
