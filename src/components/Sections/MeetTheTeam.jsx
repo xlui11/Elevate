@@ -18,8 +18,7 @@ const MeetTheTeam = () => {
 				paragraph="At Elevate Tutoring our tutors primary goal is to create an environment that allows students to feel empowered to take control of their learning and gain the confidence they need to succeed. As a result, students look forward to tutoring and many have told us that the education we provide is far more effective than traditional methods of learning."
 			/>
 			<ProfileCards teamProfiles={TeamProfiles} />
-			<WhyElevateBanner/>
-
+			{/* <WhyElevateBanner/> */}
 		</section>
 	);
 };
