@@ -54,6 +54,7 @@ const ProfileCardSection = ({ teamProfiles }) => {
 				<button
 					className="uppercase lg:px-[36px] py-[12px] lg:text-[20px] rounded-lg text-links cursor-pointer border border-black z-3 relative"
 					onClick={() => setExpanded(!expanded)}
+					role="button"
 				>
 					Meet the rest of the team
 				</button>
