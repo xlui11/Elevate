@@ -43,8 +43,8 @@ const EnrollForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        emailjs.send("service_ndsmgxs",
-            "template_wmtj4md",
+        emailjs.send("service_9xlhznp",
+            "template_dl6zd0s",
             {
                 from_name: form.name,
                 to_name: 'Elevate Tutoring',
@@ -52,9 +52,9 @@ const EnrollForm = () => {
                 phone_number: form.phoneNumber,
                 to_email: 'alton_ong@live.com.sg',
                 grade: form.grade,
-                subjectChoice: form.subjectChoice
+                subject_choice: form.subjectChoice
             },
-            'a1UWjQH-V74I6zQsB'
+            'PsFDrxNN0fVhcLU7c'
         ).then(() => {
             setLoading(false);
             alert('Thank you I will get back to you as soon as possible.');
