@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import ProfileCard from "./ProfileCard";
 import MainButton from "../Reusables/MainButton";
 
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { fadeIn, textFade } from "../../utils/motion.js";
 
 const ProfileCardSection = ({ teamProfiles }) => {
@@ -20,13 +20,13 @@ const ProfileCardSection = ({ teamProfiles }) => {
 			className="flex justify-between flex-wrap gap-[24px] text-gray-900 relative"
 		>
 			<motion.div
-				className={`w-full h-[700px] top-0 left-0 right-0 bottom-0 bg-/30  bg-gradient-to-t from-[#F8F3F0] ${
+				className={`w-full lg:h-[700px] h-[500px] top-0 left-0 right-0 bottom-0 bg-/30  bg-gradient-to-t from-[#F8F3F0] ${
 					expanded ? "hidden" : "absolute"
 				}`}
 			/>
 			<motion.div
 				className={`flex justify-between flex-wrap gap-[24px]  ${
-					expanded ? "h-[100%]" : "max-h-[480px] overflow-hidden"
+					expanded ? "h-[100%]" : "lg:max-h-[480px] max-h-[500px] overflow-hidden"
 				}`}
 				transition={{
 					type: "linear",
@@ -52,11 +52,11 @@ const ProfileCardSection = ({ teamProfiles }) => {
 				className="w-full flex flex-col items-end py-[8px]"
 			>
 				<button
-					className="uppercase lg:px-[36px] py-[12px] lg:text-[20px] rounded-lg text-links cursor-pointer border border-black z-3 relative"
+					className="uppercase w-full lg:w-fit lg:px-[36px] py-[12px] lg:text-[20px] rounded-lg text-links cursor-pointer border border-black z-3 relative"
 					onClick={() => setExpanded(!expanded)}
 					role="button"
 				>
-					Meet the rest of the team
+					{expanded ? "Minimise team section": "Meet the rest of the team"}
 				</button>
 				{/* <MainButton buttonText="Meet the rest of the team" /> */}
 			</motion.div>
