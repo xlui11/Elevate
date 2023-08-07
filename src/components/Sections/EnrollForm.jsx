@@ -3,11 +3,13 @@ import {useRef, useState} from "react";
 // Helper
 import {SectionsWrapper} from "../../hoc/"
 import {motion} from "framer-motion";
-import {fadeIn} from "../../utils/motion.js";
+import emailjs from "@emailjs/browser"
+import {FormProvider, useForm} from "react-hook-form";
 
+import {fadeIn} from "../../utils/motion.js";
 // Components
 import SectionText from "../Reusables/SectionText.jsx";
-import emailjs from "@emailjs/browser"
+import InputField from "../Reusables/InputField.jsx"
 
 // Icons
 import Clock from "../../assets/Clock.svg";
@@ -80,6 +82,7 @@ const EnrollForm = () => {
                 paragraph="We would love to find out more about your needs and requirements. Kindly fill out the form or give us a call and we will reach out to you for a free trial."
             />
             <section className="lg:flex lg:space-x-[64px] space-y-[32px] lg:space-y-0">
+
                 <motion.div
                     variants={fadeIn("right", "tween", 1.2, 1)}
                     className="lg:w-1/2 space-y-[16px]">
@@ -87,23 +90,68 @@ const EnrollForm = () => {
 
                     {/* This will be the form */}
                     <form ref={formRef} className="flex flex-col py-3 space-y-4" onSubmit={handleSubmit}>
-                        <label htmlFor="name">
-                            <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Full name" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
-                        </label>
-                        <label htmlFor="phoneNumber">
-                            <input type="text" name="phoneNumber" value={form.phoneNumber} onChange={handleChange} placeholder="Phone number" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
-                        </label>
-                        <label htmlFor="email">
-                            <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="Email" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
-                        </label>
-                        <div className="flex justify-between space-x-6">
-                            <label htmlFor="grade" className="w-1/2">
-                                <input type="text" name="grade" value={form.grade} onChange={handleChange} placeholder="Grade" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
-                            </label>
-                            <label htmlFor="subjectChoice" className="w-1/2">
-                                <input type="text" name="subjectChoice" value={form.subjectChoice} onChange={handleChange} placeholder="Subject choice" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>
-                            </label>
+                        <InputField
+                            placeholder="Type your full name..."
+                            id="full name" type="text" name="name"
+                            label="Full name"
+                            handleChange={handleChange}
+                            value={form.name}
+                        />
+                        <InputField
+                            placeholder="Type your phone number..."
+                            name="phoneNumber"
+                            id="phone number"
+                            type="number"
+                            label="Phone number"
+                            handleChange={handleChange}
+                            value={form.phoneNumber}
+                        />
+                        <InputField
+                            placeholder="Type your email..."
+                            name="email"
+                            id="email"
+                            type="email"
+                            label="Email"
+                            handleChange={handleChange}
+                            value={form.email}
+                        />
+                        <div className="flex gap-4">
+                            <InputField
+                                placeholder="Grade"
+                                name="grade"
+                                id="grade"
+                                type="text"
+                                label="Grade"
+                                handleChange={handleChange}
+                                value={form.grade}
+                            />
+                            <InputField
+                                placeholder="Select subject choice..."
+                                name="subjectChoice"
+                                type="text"
+                                id="subject choice"
+                                label="Subject choice"
+                                handleChange={handleChange}
+                                value={form.subjectChoice}
+                            />
                         </div>
+                        {/*<label htmlFor="name">*/}
+                        {/*    <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Full name" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
+                        {/*</label>*/}
+                        {/*<label htmlFor="phoneNumber">*/}
+                        {/*    <input type="text" name="phoneNumber" value={form.phoneNumber} onChange={handleChange} placeholder="Phone number" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
+                        {/*</label>*/}
+                        {/*<label htmlFor="email">*/}
+                        {/*    <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="Email" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
+                        {/*</label>*/}
+                        {/*<div className="flex justify-between space-x-6">*/}
+                        {/*    <label htmlFor="grade" className="w-1/2">*/}
+                        {/*        <input type="text" name="grade" value={form.grade} onChange={handleChange} placeholder="Grade" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
+                        {/*    </label>*/}
+                        {/*    <label htmlFor="subjectChoice" className="w-1/2">*/}
+                        {/*        <input type="text" name="subjectChoice" value={form.subjectChoice} onChange={handleChange} placeholder="Subject choice" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
+                        {/*    </label>*/}
+                        {/*</div>*/}
                         <div className="w-full flex justify-end">
                             <button
                                 type="submit"
@@ -114,9 +162,10 @@ const EnrollForm = () => {
                         </div>
                     </form>
                 </motion.div>
+
                 <motion.div
                     variants={fadeIn("left", "tween", 1.2, 1)}
-                    className="lg:w-1/2 space-y-[16px]">
+                    className="lg:w-1/2 space-y-[40px]">
                     <h2 className="lg:text-[40px] text-[32px] font-bold">Location & Hours</h2>
                     <div className="flex lg:gap-[32px] gap-[24px] py-3">
                         <img className="w-[70px] lg:w-[80px]" src={Clock} alt="Icon of a clock to represent the opening times"/>
