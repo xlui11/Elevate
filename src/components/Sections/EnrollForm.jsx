@@ -3,14 +3,15 @@ import {useRef, useState} from "react";
 // Helper
 import {SectionsWrapper} from "../../hoc/"
 import {motion} from "framer-motion";
-import emailjs from "@emailjs/browser"
-import {FormProvider, useForm} from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import {useFormik} from "formik";
 
+import {basicSchema} from "../../schemas/index.js";
 import {fadeIn} from "../../utils/motion.js";
 // Components
 import SectionText from "../Reusables/SectionText.jsx";
-import InputField from "../Reusables/InputField.jsx"
 
+import InputField from "../Reusables/InputField.jsx"
 // Icons
 import Clock from "../../assets/Clock.svg";
 import Contact from "../../assets/Contact.svg";
@@ -20,59 +21,46 @@ import Address from "../../assets/Address.svg";
 
 const EnrollForm = () => {
 
-    const formRef = useRef();
-    const [form, setForm] = useState({
-        name: "",
-        phoneNumber: "",
-        email: "",
-        grade: "",
-        subjectChoice: ""
-    });
-
-    const [loading, setLoading] = useState(false);
-
-    const handleChange = (e) => {
-        const {name, value } = e.target;
-        setForm({...form, [name]: value});
-    }
-
-    // template_wmtj4md
-    // service_ndsmgxs
-    // a1UWjQH-V74I6zQsB
-
-
-    // service_9xlhznp
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const onSubmit = (values, action) => {
+        // e.preventDefault();
         setLoading(true);
+        console.log('Sending')
         emailjs.send("service_9xlhznp",
             "template_dl6zd0s",
             {
-                from_name: form.name,
+                from_name: values.name,
                 to_name: 'Elevate Tutoring',
-                from_email: form.email,
-                phone_number: form.phoneNumber,
+                from_email: values.email,
+                phone_number: values.phoneNumber,
                 to_email: 'alton_ong@live.com.sg',
-                grade: form.grade,
-                subject_choice: form.subjectChoice
+                grade: values.grade,
+                subject_choice: values.subjectChoice
             },
             'PsFDrxNN0fVhcLU7c'
         ).then(() => {
             setLoading(false);
             alert('Thank you I will get back to you as soon as possible.');
-            setForm({
-                name: "",
-                phoneNumber: "",
-                email: "",
-                grade: "",
-                subjectChoice: ""
-            })
+            action.resetForm();
         }, (error) => {
             setLoading(false);
             console.log(error);
             alert('Something went wrong, please give us a call instead!')
         })
     }
+
+    const {values, errors, handleBlur, handleChange, handleSubmit,  touched} = useFormik({
+        initialValues: {
+            name: "",
+            phoneNumber: "",
+            email: "",
+            grade: "",
+            subjectChoice: ""
+        },
+        validationSchema: basicSchema,
+        onSubmit
+    });
+
+    const [loading, setLoading] = useState(false);
 
     return (
         <section className="text-primary lg:py-[180px] space-y-[64px] px-4">
@@ -89,22 +77,31 @@ const EnrollForm = () => {
                     <h2 className="lg:text-[40px] text-[32px] font-bold">Reach out to us!</h2>
 
                     {/* This will be the form */}
-                    <form ref={formRef} className="flex flex-col py-3 space-y-4" onSubmit={handleSubmit}>
+                    <form className="flex flex-col py-3 space-y-4" onSubmit={handleSubmit}>
                         <InputField
                             placeholder="Type your full name..."
-                            id="full name" type="text" name="name"
+                            id="full name"
+                            type="text"
+                            name="name"
                             label="Full name"
                             handleChange={handleChange}
-                            value={form.name}
+                            value={values.name}
+                            handleBlur={handleBlur}
+                            errors={errors.name}
+                            touched={touched.name}
                         />
+
                         <InputField
                             placeholder="Type your phone number..."
                             name="phoneNumber"
                             id="phone number"
                             type="number"
-                            label="Phone number"
+                            label="Phone number - Optional*"
                             handleChange={handleChange}
-                            value={form.phoneNumber}
+                            value={values.phoneNumber}
+                            handleBlur={handleBlur}
+                            errors={errors.phoneNumber}
+                            touched={touched.phoneNumber}
                         />
                         <InputField
                             placeholder="Type your email..."
@@ -113,7 +110,10 @@ const EnrollForm = () => {
                             type="email"
                             label="Email"
                             handleChange={handleChange}
-                            value={form.email}
+                            value={values.email}
+                            handleBlur={handleBlur}
+                            errors={errors.email}
+                            touched={touched.email}
                         />
                         <div className="flex gap-4">
                             <InputField
@@ -123,7 +123,10 @@ const EnrollForm = () => {
                                 type="text"
                                 label="Grade"
                                 handleChange={handleChange}
-                                value={form.grade}
+                                value={values.grade}
+                                handleBlur={handleBlur}
+                                errors={errors.grade}
+                                touched={touched.grade}
                             />
                             <InputField
                                 placeholder="Select subject choice..."
@@ -132,26 +135,12 @@ const EnrollForm = () => {
                                 id="subject choice"
                                 label="Subject choice"
                                 handleChange={handleChange}
-                                value={form.subjectChoice}
+                                value={values.subjectChoice}
+                                handleBlur={handleBlur}
+                                errors={errors.subjectChoice}
+                                touched={touched.subjectChoice}
                             />
                         </div>
-                        {/*<label htmlFor="name">*/}
-                        {/*    <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Full name" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
-                        {/*</label>*/}
-                        {/*<label htmlFor="phoneNumber">*/}
-                        {/*    <input type="text" name="phoneNumber" value={form.phoneNumber} onChange={handleChange} placeholder="Phone number" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
-                        {/*</label>*/}
-                        {/*<label htmlFor="email">*/}
-                        {/*    <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="Email" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
-                        {/*</label>*/}
-                        {/*<div className="flex justify-between space-x-6">*/}
-                        {/*    <label htmlFor="grade" className="w-1/2">*/}
-                        {/*        <input type="text" name="grade" value={form.grade} onChange={handleChange} placeholder="Grade" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
-                        {/*    </label>*/}
-                        {/*    <label htmlFor="subjectChoice" className="w-1/2">*/}
-                        {/*        <input type="text" name="subjectChoice" value={form.subjectChoice} onChange={handleChange} placeholder="Subject choice" className="lg:py-4 py-3 px-6 placeholder:text-gray-500 text-primary rounded-lg outlined-none border border-primary/40 font-medium w-full"/>*/}
-                        {/*    </label>*/}
-                        {/*</div>*/}
                         <div className="w-full flex justify-end">
                             <button
                                 type="submit"

@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 
 // Components
 import ProfileCard from "./ProfileCard";
-import MainButton from "../Reusables/MainButton";
 
 import {  motion } from "framer-motion";
 import { fadeIn, textFade } from "../../utils/motion.js";
