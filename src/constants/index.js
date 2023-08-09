@@ -17,7 +17,7 @@ const TeamProfiles = [
 		name: "Ciri",
 		profileImg: DaDog,
 		role: "Teaching support | Therapy dog",
-		tag: "He's a Husky"
+		tag: "He's a dog"
 	},
 	{
 		name: "Ciri",
